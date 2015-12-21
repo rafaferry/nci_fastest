@@ -1,0 +1,3 @@
+FROM jenkins:1.625.3
+ENV JENKINS_OPTS --httpPort=8090
+EXPOSE 8090
