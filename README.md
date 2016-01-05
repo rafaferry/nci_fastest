@@ -5,7 +5,7 @@ A *fast* docker-compose open source test environment with:
 * Selenium Grid
 * (n) Firefox nodes
 
-## Create a full integrated testing enviroment with five simple steps.
+## Create a full integrated testing enviroment in five simple steps.
 
 1. Install Docker and Docker Compose
 2. Download the project
