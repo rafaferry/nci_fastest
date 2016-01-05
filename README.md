@@ -1,6 +1,19 @@
-# nci_fastest
-This project is the configuration of an docker-compose environment of a jenkins + seleniumGrid + firefox nodes.
+# fasTEST
 
-Check if Docker and Docker Compose is correctly installed on your environment.
+A *fast* docker-compose open source test environment with:
+* Jenkins
+* Selenium Grid
+* (n) Firefox nodes
 
-To run, first execute the build-images.sh to build the required images, and then run start-grid.sh
+## Create a full integrated testing enviroment with five simple steps.
+
+1. Install Docker and Docker Compose
+2. Download the project
+3. Run ./build-images.sh (first time only)
+4. Run ./start-grid.sh [n firefox nodes, default = 5]
+5. Be happy \o/
+
+## Useful tips
+* Jenkins configuration - http://localhost:8090/
+* Selenium grid - http://localhost:4444/
+* Stop the grid - docker-compose stop
