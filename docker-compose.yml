@@ -1,21 +1,21 @@
-jenkins:
-  image: nci_fastest/jenkins
-  ports:
-    - "50000:50000"
-    - "8090:8090"
-  links:
-    - hub
-  volumes:
-    - /var/jenkins_home:/var/jenkins_home
-    - ~/.m2/repository:/root/.m2/repository
+#jenkins:
+#  image: nci_fastest/jenkins
+#  ports:
+#    - "50000:50000"
+#    - "8090:8090"
+#  links:
+#    - hub
+#  volumes:
+#    - /var/jenkins_home:/var/jenkins_home
+#    - ~/.m2/repository:/root/.m2/repository
 hub:
   image: nci_fastest/grid
   ports:
     - "4444:4444"
 firefox:
   image: nci_fastest/node
-  links:
-    - hub
-    - jenkins
+#  links:
+#    - hub
+#    - jenkins
   expose:
     - "5555"
