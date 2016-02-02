@@ -1,4 +1,4 @@
-FROM jenkins:1.625.3
+FROM jenkins:latest
 
 USER root
 
@@ -20,6 +20,7 @@ RUN apt-get install -y git;
 
 RUN rm -rf /var/lib/apt/lists/*
 
-
 ENV JENKINS_OPTS --httpPort=8090
+ENV JAVA_OPTS=-Xmx1g -XX:MaxPermSize=256m
+ENV TERM=xterm
 EXPOSE 8090
