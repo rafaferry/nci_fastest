@@ -1,12 +1,10 @@
 sonarqube:
-  image: sonarqube:5.3
+  image: nci_fastest/sonarqube
   ports:
     - "9000:9000"
     - "9092:9092"
   environment:
    - SONARQUBE_JDBC_URL=jdbc:postgresql://sonarqube_db_1:5432/sonar
-  volumes_from:
-   - plugins
 
 db:
   image: postgres
@@ -22,10 +20,4 @@ datadb:
     - /var/lib/postgresql
   command: /bin/true
 
-plugins:
-  image: sonarqube:5.3
-  volumes:
-   - /opt/sonarqube/extensions
-   - /opt/sonarqube/lib/bundled-plugins
-  command: /bin/true
 
