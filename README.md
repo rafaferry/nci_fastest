@@ -14,6 +14,6 @@ A *fast* docker-compose open source test environment with:
 5. Be happy \o/
 
 ## Useful tips
-* Jenkins configuration - http://localhost:8090/
+* Jenkins configuration - http://localhost:8080/
 * Selenium grid - http://localhost:4444/
 * Stop the grid - docker-compose stop
