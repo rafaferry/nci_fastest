@@ -6,4 +6,9 @@ firefox:
   image: nci_fastest/node
   expose:
     - "5555"
-
+jenkins:
+  image: nci_fastest/jenkins
+  ports:
+  - "8080:8080"
+  volumes:
+    - /home/nci/.jenkins/:/var/jenkins_home
