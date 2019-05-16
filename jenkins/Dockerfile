@@ -1,5 +1,5 @@
-FROM jenkins:latest
-
+FROM jenkins/jenkins:lts
+#FROM jenkins/jenkins:1.642.4
 USER root
 
 # get maven 3.3.3
@@ -12,15 +12,11 @@ RUN rm -f /tmp/apache-maven-3.3.3.tar.gz
 ENV MAVEN_HOME /opt/maven
 
 
-#install java7
-RUN apt-get update && apt-get install -y openjdk-7-jdk
-
 RUN apt-get install -y git;
-
 
 RUN rm -rf /var/lib/apt/lists/*
 
-ENV JENKINS_OPTS --httpPort=8090
+ENV JENKINS_OPTS --httpPort=8080
 ENV JAVA_OPTS=-Xmx1g -XX:MaxPermSize=256m
 ENV TERM=xterm
-EXPOSE 8090
+EXPOSE 8080
